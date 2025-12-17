@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 import streamlit.web.cli as stcli
 
-notes = """
+"""
 
 서비스를 이용하기 위해서는 PostgreSQL 및 이의 확장 기능인 pgvector와 postgis가 사전에 설치되어 있어야 합니다.
 
