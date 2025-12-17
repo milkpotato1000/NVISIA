@@ -8,7 +8,7 @@
 사용자는 뉴스 기사 간의 연관성을 파악하고, 지리적 정보를 지도 위에서 확인하며, 키워드 기반의 지식 그래프를 통해 북한 동향을 입체적으로 분석할 수 있습니다.
 
 ![Dashboard Preview](https://via.placeholder.com/800x400?text=Dashboard+Preview+Image) 
-*(스크린샷 이미지가 있다면 여기에 추가해주세요)*
+*(![alt text](image.png))*
 
 ---
 
@@ -113,7 +113,7 @@ NVISIA/
 │   ├── geocoder.py       # 위치 정보 처리 및 지오코딩
 │   ├── knowledge.py      # 지식 그래프 생성 로직
 │   ├── llmtodb.py        # LLM 처리 및 DB 적재 파이프라인
-│   └── rec.py            #뉴스 추천 시스템 로직
+│   └── rec.py            # 뉴스 추천 시스템 로직
 ├── main.py               # 애플리케이션 실행 엔트리포인트
 ├── pyproject.toml        # Poetry 프로젝트 설정 및 의존성
 └── README.md             # 프로젝트 문서
