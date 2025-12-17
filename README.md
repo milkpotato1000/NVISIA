@@ -7,8 +7,8 @@
 
 사용자는 뉴스 기사 간의 연관성을 파악하고, 지리적 정보를 지도 위에서 확인하며, 키워드 기반의 지식 그래프를 통해 북한 동향을 입체적으로 분석할 수 있습니다.
 
-![Dashboard Preview](https://via.placeholder.com/800x400?text=Dashboard+Preview+Image) 
-*(![alt text](image.png))*
+[Dashboard Preview]
+![alt text](image.png)
 
 ---
 
