@@ -3,6 +3,7 @@
 # =========================
 import numpy as np
 import pandas as pd
+from pathlib import Path
 
 import streamlit as st
 from streamlit_folium import st_folium
@@ -23,14 +24,6 @@ from psycopg2.extras import RealDictCursor
 
 
 notes = """
-
-본 app을 실행하기 위해서는 PostgreSQL 및 이의 확장 기능인 pgvector와 postgis가 사전에 설치되어 있어야 합니다.
-
-데이터베이스 정보(host, user, password)는 사용 중인 환경에 맞게 수정이 필요합니다.
-
-실행 방법:
-    1) NVISIA 폴더에서 poetry install
-    2) src 폴더에서 poetry run streamlit run app.py
 
 동작 흐름:
     1) 기사 원문 CSV 파일 업로드 (필수 컬럼: title, content, publish_date, url)
@@ -56,6 +49,14 @@ DB = dict(
     password="postgres1202",
     port=5432,
 )
+
+
+# =========================
+# 파일 경로 세팅 
+# =========================
+ROOT_DIR = Path(__file__).resolve().parents[1]   
+DATA_DIR = ROOT_DIR / "data"
+MODELS_DIR = ROOT_DIR / "models"
 
 
 # =========================
@@ -122,9 +123,9 @@ plt.rc("font", family="Malgun Gothic")
 plt.rc("axes", unicode_minus=False)
 
 # LLMtoDatabase용 pickle 경로
-TFIDF_VECTORIZER_PATH = "../models/vectorizer.pkl"
-SVM_MODEL_PATH = "../models/svm.pkl"
-LABEL_ENCODER_PATH = "../models/label.pkl"
+TFIDF_VECTORIZER_PATH = MODELS_DIR / "vectorizer.pkl"
+SVM_MODEL_PATH = MODELS_DIR / "svm.pkl"
+LABEL_ENCODER_PATH = MODELS_DIR / "label.pkl"
 
 if "page" not in st.session_state:
     st.session_state["page"] = "home" 
@@ -150,7 +151,7 @@ def render_home():
     )
 
     try:
-        with open("../data/upload_template.csv", "rb") as f:
+        with open(DATA_DIR / "upload_template.csv", "rb") as f:
             template_bytes = f.read()
 
         st.download_button(
