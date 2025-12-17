@@ -7,7 +7,7 @@
 
 사용자는 뉴스 기사 간의 연관성을 파악하고, 지리적 정보를 지도 위에서 확인하며, 키워드 기반의 지식 그래프를 통해 북한 동향을 입체적으로 분석할 수 있습니다.
 
-[Dashboard Preview]
+## 📊 Dashboard Preview
 ![alt text](image.png)
 
 ---
@@ -126,12 +126,12 @@ NVISIA/
 *   **결과 발표**: 2025. 01. 07
 
 ## 👥 참여 인원 (Contributors)
-*   **천승우**
-*   **손호진**
-*   **정소민**
-*   **진용현**
+*   **천승우**: Project Manager (PM), LLM 기반 기사 요약 파이프라인(Summarization Pipeline) 구축, Streamlit 대시보드 아키텍처 및 레이아웃
+*   **손호진**: Database 구축 및 운영(DBA), App-DB 데이터 인터랙션 관리, 지리 정보 시각화(Geospatial Visualization)
+*   **정소민**: 도메인(북한) 기반 데이터 검증 및 평가(Domain Validation), 사용자 경험(UX) 관점의 추천 시스템 평가
+*   **전용현**: 뉴스 분류 모델(Classification Model) 학습 및 성능 평가, Knowledge Graph 레이아웃 및 시각화 구현
 
 ---
 
 ## 📜 라이선스 (License)
-This project is licensed under the terms of the MIT license.
+*This project is licensed under the terms of the NVISIA license.*
